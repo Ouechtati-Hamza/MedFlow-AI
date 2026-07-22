@@ -1,0 +1,81 @@
+# MedFlow AI — Intelligent Industrial Medical Manufacturing Platform
+
+**MedFlow AI** is a professional Windows desktop application designed to replace legacy, manual paper-based production tracking in medical manufacturing facilities with an intelligent, offline digital ecosystem.
+
+Built by Team **TOP50** for the Hackathon:
+*   **Hamza Ouechtati**
+*   **Ahmed Hajji**
+*   **Azer Sehli**
+*   **Omar Baidi**
+
+---
+
+## 🌟 Key Features
+
+1.  **Professional Splash Screen**: Boot sequence with technology loading indicator and scan effects.
+2.  **Enterprise Security Gateway**: Secure login using industrial role authorization (Admin: `admin@medflow.ai` / `admin123`).
+3.  **Executive Dashboard**: Real-time summary of production counts (12,540+ units), operational efficiency (OEE), quality yield, active workstation status, and live alarms.
+4.  **Unit Monitoring Module**: Interactive dashboard for specific machines showing temperature, pressure, speed, and structural vibration graphs (Recharts).
+5.  **Offline AI Assistant**: Chat-based troubleshooting node. Performs automated **Root Cause Analysis (RCA)** on batch failures and logs diagnostics locally.
+6.  **Predictive Maintenance**: Gauge controls displaying failure probability models (e.g., CNC spindle motor bearing wear, autoclave pressure leaks).
+7.  **Quality Control Logs**: Real-time log of manufactured batches with status tags (Approved/Rejected) and detailed AI anomaly explanations.
+8.  **Report Generator**: Local compiler leveraging ReportLab to compile and download PDF reports (Daily, Weekly, Quality, Maintenance).
+9.  **Demo Control Deck**: Built-in toolbar buttons to manually trigger and reset machine failures in real-time during live demonstrations.
+
+---
+
+## 🛠 Technology Stack
+
+*   **Desktop Shell**: Electron (v30.5)
+*   **User Interface**: React (Vite) + Tailwind CSS v4 + Lucide Icons + Recharts
+*   **Backend Server**: Python Flask (Runs multi-threaded simulation and API endpoints on local port 5000)
+*   **Database**: Local SQLite database (`medflow.db`)
+*   **AI Engine**: Offline z-score statistical heuristics & regression stress models (100% private, runs without internet)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+*   **Node.js** (v18+)
+*   **Python** (3.10+)
+
+### Running in Development Mode
+
+To start both the Flask backend and Electron frontend concurrently for debugging:
+
+1.  **Start Python Backend**:
+    ```bash
+    cd backend
+    pip install -r requirements.txt
+    python app.py
+    ```
+2.  **Start React Frontend Dev Server** (in a separate terminal):
+    ```bash
+    cd frontend
+    npm install
+    npm run dev
+    ```
+3.  **Start Electron Application** (in a third terminal):
+    ```bash
+    npm install
+    npm start
+    ```
+
+---
+
+## 📦 Compiling and Packaging the Standalone App
+
+To bundle the Python backend and React assets into a single standalone `MedFlow AI.exe` folder structure that runs completely offline:
+
+1.  Double-click or run the Windows compilation script in the root directory:
+    ```cmd
+    build.bat
+    ```
+2.  The script will:
+    *   Compile the React frontend to static assets.
+    *   Package the Python backend using PyInstaller.
+    *   Package the Electron shell using Electron Packager.
+3.  Find the output executable at:
+    `dist-desktop/MedFlow AI-win32-x64/MedFlow AI.exe`
