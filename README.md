@@ -36,6 +36,15 @@ MedFlow AI provides:
 
 ---
 
+## 📂 Documentation & Resources
+
+- 📄 [Project Overview](docs/overview.md)
+- 📊 [Project Presentation & Demo](assets/MedFlow_AI_Presentation.pptx)
+- 🏗️ [Architecture Diagram](docs/MedFlow_AI_Architecture.txt)
+- 📘 [Technical Documentation](docs/MedFlow_AI_Technical_Documentation.txt)
+
+---
+
 ## 🏆 Achievement
 
 🥇 Top 4 Team — Tunisia Global Forum 2026 AI Hackathon
