@@ -1,0 +1,146 @@
+MedFlow AI – Upload Architecture Diagram
+┌─────────────────────────────────────────────────────────────┐
+│                    MEDFLOW AI PLATFORM                      │
+│     AI-Powered Industry 4.0 Manufacturing Intelligence      │
+└─────────────────────────────────────────────────────────────┘
+
+                    ┌─────────────────────┐
+                    │ Pharmaceutical Plant │
+                    └──────────┬──────────┘
+                               │
+                               │ Sensor Telemetry
+                               │
+        ┌──────────────────────┼──────────────────────┐
+        │                      │                      │
+        ▼                      ▼                      ▼
+
+┌──────────────┐      ┌──────────────┐      ┌──────────────┐
+│ Tablet Press │      │ Mixing Tank  │      │ Packaging    │
+│ Temperature  │      │ Pressure     │      │ Line         │
+│ Vibration    │      │ Runtime      │      │ Energy Usage │
+└──────┬───────┘      └──────┬───────┘      └──────┬───────┘
+       │                     │                     │
+       └──────────────┬──────┴─────────────┬───────┘
+                      │
+                      ▼
+
+      ┌────────────────────────────────────┐
+      │ Telemetry Ingestion Layer          │
+      │ Next.js API Routes                 │
+      │ Data Validation                    │
+      │ Event Processing                   │
+      └─────────────────┬──────────────────┘
+                        │
+                        ▼
+
+      ┌────────────────────────────────────┐
+      │ PostgreSQL + Prisma ORM            │
+      │                                    │
+      │ Machines                           │
+      │ Sensor Readings                    │
+      │ Alerts                             │
+      │ Predictions                        │
+      │ Maintenance Tickets                │
+      │ Copilot Chats                      │
+      └─────────────────┬──────────────────┘
+                        │
+                        ▼
+
+ ┌────────────────────────────────────────────────────┐
+ │                AI Intelligence Layer               │
+ ├────────────────────────────────────────────────────┤
+ │                                                    │
+ │ 1. Anomaly Detection Engine                        │
+ │    • Detect abnormal behavior                      │
+ │                                                    │
+ │ 2. Predictive Maintenance Engine                   │
+ │    • Failure probability scoring                   │
+ │    • Remaining Useful Life (RUL)                   │
+ │                                                    │
+ │ 3. Explainable AI Module                           │
+ │    • Root cause analysis                           │
+ │    • Risk explanation                              │
+ │                                                    │
+ │ 4. Recommendation Engine                           │
+ │    • Maintenance actions                           │
+ │    • Priority assignment                           │
+ │                                                    │
+ │ 5. OpenAI GPT Copilot                              │
+ │    • Natural language insights                     │
+ │    • Factory assistant                             │
+ │                                                    │
+ └─────────────────┬──────────────────────────────────┘
+                   │
+                   ▼
+
+┌────────────────────────────────────────────────────┐
+│ Maintenance Automation Engine                      │
+├────────────────────────────────────────────────────┤
+│ If Risk Score > Threshold                          │
+│                                                    │
+│ • Create Ticket                                    │
+│ • Assign Priority                                  │
+│ • Estimate Downtime Risk                           │
+│ • Generate Action Plan                             │
+│ • Notify Maintenance Team                          │
+└─────────────────┬──────────────────────────────────┘
+                  │
+                  ▼
+
+┌────────────────────────────────────────────────────┐
+│ Enterprise Dashboard (Next.js + Shadcn UI)         │
+├────────────────────────────────────────────────────┤
+│ KPI Dashboard                                      │
+│ Machine Monitoring                                 │
+│ Failure Prediction Charts                          │
+│ Alert Center                                       │
+│ Maintenance Tickets                                │
+│ AI Copilot Chat                                    │
+│ Executive Reports                                  │
+└─────────────────┬──────────────────────────────────┘
+                  │
+                  ▼
+
+        ┌───────────────────────────┐
+        │ Factory Managers          │
+        │ Maintenance Engineers     │
+        │ Operations Directors      │
+        │ Quality Teams             │
+        └───────────────────────────┘
+Enterprise Architecture Layers
+┌─────────────────────────────┐
+│ Presentation Layer          │
+│ Next.js Dashboard           │
+│ AI Copilot                  │
+└──────────────┬──────────────┘
+               │
+┌──────────────▼──────────────┐
+│ Application Layer           │
+│ API Routes                  │
+│ Server Actions              │
+│ Business Logic              │
+└──────────────┬──────────────┘
+               │
+┌──────────────▼──────────────┐
+│ AI Intelligence Layer       │
+│ Anomaly Detection           │
+│ Failure Prediction          │
+│ Explainable AI              │
+│ Recommendation Engine       │
+│ GPT Copilot                 │
+└──────────────┬──────────────┘
+               │
+┌──────────────▼──────────────┐
+│ Data Layer                  │
+│ PostgreSQL                  │
+│ Prisma ORM                  │
+└──────────────┬──────────────┘
+               │
+┌──────────────▼──────────────┐
+│ Factory Equipment Layer     │
+│ IoT Sensors                 │
+│ PLC Systems                 │
+│ Industrial Machines         │
+└─────────────────────────────┘
+Input → AI Analysis → Automated Action → Business Impact
+Sensors → AI Engine → Maintenance Automation → Reduced Downtime
